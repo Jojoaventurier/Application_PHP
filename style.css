@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     
+   
 }
 
 #bouton_ajout {
@@ -15,5 +16,4 @@
 
 #titre {
     background-color: rgb(253, 226, 226);
-    padding: 10px;
 }
