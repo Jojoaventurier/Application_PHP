@@ -44,6 +44,9 @@ recap.php -> affichera tous les produits en session (et en détail) et présente
 
 var_dump($_GET);  //-> $_GET est un tableau contenant une clé "page" associée à la valeur "2". La valeur est de type "string" (même si c'est un nombre) puisque HTTP est un protocole de communication de texte (HyperTEXT Transfer Protocol)
 
-// DEFINITION SESSION : Une session PHP correspond à une faàon de stocker des données différents pour chaque utilisateur en utilisant un identifiant de session unique. 
 
-// DEFINITION FAILLE XSS : 
+// DEFINITION SESSION : [voir GLOSSAIRE] Une session PHP correspond à une façon de stocker des données différents pour chaque utilisateur en utilisant un identifiant de session unique. 
+
+// DEFINITION FAILLE XSS : Faille de sécurité qui permet un attaquant d'injecter dans un site web un code client malveillant. ce code est exécuté par les victimes et permet aux attaquants de contourner les contrôles d'accès et d'usurper l'identité des utilisateurs. Ces attaques réussissent si l'application web n'emploie pas assez de validation ou d'encodage. Le navigateur de l'utulisateur ne peut pas détecter que le script malveillant n'est pas fiable et lui donne donc accès à tous les cookies, jetons de session ou autres informations sensibles propres au site, ou permet au script malveillant de réécrire le contenu HTML. Les attaques de script intersite se produisent généralement lorsque 1) les données entrent dans une application WEB via une source non fiable (le plus souvent une requête web)ou 2) le contenu dynamique est envoyé à un utiisateur web sans être reconnu comme contenu malveillant. 
+//Les attaques XSS peuvent être classées en 3 catégories : stockée (aussi appelée persistente), reflétée (aussi appelée non-persistante), ou basée sur le DOM.
+
