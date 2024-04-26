@@ -1,8 +1,8 @@
 <?php
 /* 
     $_GET est une superglobale. 
-Une superglobale n'a pas besoin d'être créee, elle est automatiquement chargée par le serveur PHP. 
-Les superglobales sont accessibles partout, depuis n'importe quelle fonction classe ou fichier, sans rien avoir à faire de spécial.
+Une superglobale n'a pas besoin d'être créee, elle est automatiquement chargée par le serveur PHP (ce sont des variables NATIVES de PHP). 
+Les superglobales sont des variables accessibles partout, depuis n'importe quelle fonction classe ou fichier, sans rien avoir à faire de spécial.
 Elles sont toutes de type tableau, proposant une manière simple d'y regrouper plusieurs informations sous forme de paires "clé/valeur". 
 
 Le terme "superglobales" signifie que ces variables sont disponibles dans N'IMPORTE QUEL SCRIPT PHP.
@@ -43,3 +43,7 @@ recap.php -> affichera tous les produits en session (et en détail) et présente
 */
 
 var_dump($_GET);  //-> $_GET est un tableau contenant une clé "page" associée à la valeur "2". La valeur est de type "string" (même si c'est un nombre) puisque HTTP est un protocole de communication de texte (HyperTEXT Transfer Protocol)
+
+// DEFINITION SESSION : Une session PHP correspond à une faàon de stocker des données différents pour chaque utilisateur en utilisant un identifiant de session unique. 
+
+// DEFINITION FAILLE XSS : 
