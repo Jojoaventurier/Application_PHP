@@ -1,0 +1,19 @@
+
+
+#wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#bouton_ajout {
+    background-color: rgb(253, 226, 226);
+    
+}
+
+#titre {
+    background-color: rgb(253, 226, 226);
+    padding: 10px;
+}
