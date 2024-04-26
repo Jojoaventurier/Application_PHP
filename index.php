@@ -31,7 +31,7 @@
                 </label>
             </p>
             <p>
-                <input type="submit" name="submit" value="Ajouter le produit"> <!--Le champ <inpu type="submit">, représentant le bouton de osumission de formulaire, contient lui aussi un attribut "name". Ce choix permettra de vérifier côté serveur que le formulaire a bien été validé par l'utilisateur.--> 
+                <input type="submit" name="submit" value="Ajouter le produit"> <!--Le champ <inpu type="submit">, représentant le bouton de soumission de formulaire, contient lui aussi un attribut "name". Ce choix permettra de vérifier côté serveur que le formulaire a bien été validé par l'utilisateur.--> 
             </p>
         </form>    
 
