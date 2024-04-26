@@ -35,6 +35,10 @@ Le terme "superglobales" signifie que ces variables sont disponibles dans N'IMPO
             Par contre, elles ne sont pas concernées par la transmission d'information du client vers le serveur.
 
 
+index.php -> présente le formulaire pour renseigner $nomProduit, $prixUnitaire, $quantiteSouhaitee
+traitement.php -> traitera la requête provenant de la page index.php (après soumission du formulaire), ajoutera le produit avec nom, prix, quantité et le total (prix * quantité) calculé en sessions
+recap.php -> affichera tous les produits en session (et en détail) et présentera la total général de tous les produits ajoutés.    
+
 
 */
 

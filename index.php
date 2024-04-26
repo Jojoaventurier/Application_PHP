@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -25,11 +27,11 @@
             <p>
                 <label>
                     Quantité désirée :
-                    <input type="number" step="any" name="price">
+                    <input type="number" step="qtt" value="1">
                 </label>
             </p>
             <p>
-                <input type="submit" name="submit" value="Ajouter le produit"> <!--Le champ <inpu type="submit">, représentant le bouton de osumission de formulaire, contient lui aussi un attribut "name". Ce choix permettra de vérifier côté serveur que le formulaire a bien été validé par l'utilisateur. 
+                <input type="submit" name="submit" value="Ajouter le produit"> <!--Le champ <inpu type="submit">, représentant le bouton de osumission de formulaire, contient lui aussi un attribut "name". Ce choix permettra de vérifier côté serveur que le formulaire a bien été validé par l'utilisateur.--> 
             </p>
         </form>    
 
@@ -40,6 +42,3 @@
 
 <?php
 
-// index.php -> présente le formulaire pour renseigner $nomProduit, $prixUnitaire, $quantiteSouhaitee
-// traitement.php -> traitera la requête provenant de la page index.php (après soumission du formulaire), ajoutera le produit avec nom, prix, quantité et le total (prix * quantité) calculé en sessions
-// recap.php -> affichera tous les produits en session (et en détail) et présentera la total général de tous les produits ajoutés.
