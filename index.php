@@ -15,7 +15,7 @@
 
 
             <div>
-                <h2 id="titre" class="uk-card-title">Ajouter un produit</h2>
+                <h2 id="titre" class="uk-heading-line uk-text-center">Ajouter un produit</h2>
                 <form action="traitement.php" method="post">  <!--attribut action : indique la cible du formulaire, le fichier à atteindre lorsque l'utilisateur soumettra le formulaire -->                                               
                     <p>                                       <!--attribut method : précise par quelle méthode HTTP les données du formulaire sont transmises au serveur -->
                         <label>                               <!--La méthode employée ici est POST, pour ne pas "polluer" l'URL avec les données du formulaire (il est néanmoins possible de soumettre un formulaire avec la méthode GET(utilisée par défaut si aucune méthode n'est précisée), les données renseignées dans les champs du formulaire seraient par conséquent inscrites dans l'URL et limitées en nombre de caractères selon le navigateur ou le serveur) -->
