@@ -3,19 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
+   
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/css/uikit-core-rtl.min.css" integrity="sha512-/KGfVFsbk9a7nzjCYF0dSMc+H58wKeODeZVyPaR20TlLVtoQVitubbROxToRODDiBW4EbBSAA//yAt1N+xgVtg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/js/uikit.min.js" integrity="sha512-qlI3geWkDYoFqY+xf/1GTxLOYw5c2Fp0w7+bPTrkwEJD7+NWDTWOKNFA48kDY/uC5AU9jFAt6VlueKFDVjYjHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.7/dist/js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+       
 
         <title>Ajout produit</title>
     </head>
     <body>
-        <section id ="wrapper" class="uk-card uk-card-body"> 
+        <section id ="wrapper" > 
 
 
-            <div>
-                <h2 id="titre" class="uk-heading-line uk-text-center">Ajouter un produit</h2>
+            <div id="appBox" class="uk-card uk-card-body">
+                <h2 id="titre" class="uk-card-title">Ajouter un produit</h2>
                 <form action="traitement.php" method="post">  <!--attribut action : indique la cible du formulaire, le fichier à atteindre lorsque l'utilisateur soumettra le formulaire -->                                               
                     <p>                                       <!--attribut method : précise par quelle méthode HTTP les données du formulaire sont transmises au serveur -->
                         <label>                               <!--La méthode employée ici est POST, pour ne pas "polluer" l'URL avec les données du formulaire (il est néanmoins possible de soumettre un formulaire avec la méthode GET(utilisée par défaut si aucune méthode n'est précisée), les données renseignées dans les champs du formulaire seraient par conséquent inscrites dans l'URL et limitées en nombre de caractères selon le navigateur ou le serveur) -->
@@ -41,7 +41,8 @@
                 </form>
             </div>
         </section>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/js/uikit.min.js" integrity="sha512-qlI3geWkDYoFqY+xf/1GTxLOYw5c2Fp0w7+bPTrkwEJD7+NWDTWOKNFA48kDY/uC5AU9jFAt6VlueKFDVjYjHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.7/dist/js/uikit-icons.min.js"></script>
     </body>
 </html>
 
