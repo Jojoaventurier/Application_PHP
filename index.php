@@ -29,10 +29,7 @@
             } else {
                 echo "Nombre de produits ajoutés : ".count($_SESSION['products'])."<br>"; 
             }
-            ?>
-            <form action="traitement.php?action=clear" method="post">
-                <input type="button" class="uk-button uk-button-primary uk-button-small" name="CLEAR" value="CLEAR">
-            </form>    
+            ?>  
         </div>
         
     
@@ -63,13 +60,18 @@
                     <p>
                         <input id="bouton_ajout" class="uk-button uk-button-primary uk-button-small" type="submit" name="submit" value="Ajouter le produit"> <!--Le champ <input type="submit">, représentant le bouton de soumission de formulaire, contient lui aussi un attribut "name". Ce choix permettra de vérifier côté serveur que le formulaire a bien été validé par l'utilisateur.--> 
                     </p>
+                    <!-- <p>
+                    <input type="button" class="uk-button uk-button-primary uk-button-small" name="CLEAR" value="CLEAR">
+                    </p> -->
                 </form>
             </div>
 
+            <a href="traitement.php?action=clear" class="uk-button uk-button-primary uk-button-small">CLEAR</a>
 
 
-
-
+<?php
+var_dump($_SESSION['products'])
+?>
 
         </section>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/js/uikit.min.js" integrity="sha512-qlI3geWkDYoFqY+xf/1GTxLOYw5c2Fp0w7+bPTrkwEJD7+NWDTWOKNFA48kDY/uC5AU9jFAt6VlueKFDVjYjHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

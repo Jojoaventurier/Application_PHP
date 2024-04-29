@@ -25,7 +25,8 @@
                 }break;
 
             case "clear":
-                unset($_SESSION["products"]);
+                unset($_SESSION["products"]); 
+                 header("Location:index.php"); 
                 break; 
                 }
                 

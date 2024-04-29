@@ -26,7 +26,7 @@
                 echo "Nombre de produits ajoutés : ".count($_SESSION['products'])."<br>"; 
             }
             ?>
-        <button type="button" class="uk-button uk-button-primary uk-button-small">CLEAR</button>
+        <a href="traitement.php?action=clear" class="uk-button uk-button-primary uk-button-small">CLEAR</a>
         </div>
 
    <?php 
