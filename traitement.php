@@ -25,11 +25,13 @@
                 }break;
 
             case "clear":
-                unset($_SESSION["products"]); 
-                 header("Location:index.php"); 
-                break; 
-                }
+                unset($_SESSION["products"]);
+                break;
                 
+                case "remove":
+                    header("Location:recap.php");
+
+                }   
             }      
     
 

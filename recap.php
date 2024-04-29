@@ -26,10 +26,10 @@
                 echo "Nombre de produits ajoutés : ".count($_SESSION['products'])."<br>"; 
             }
             ?>
-        <a href="traitement.php?action=clear" class="uk-button uk-button-primary uk-button-small">CLEAR</a>
+        
         </div>
 
-   <?php 
+        <?php 
         if(!isset($_SESSION['products']) || empty($_SESSION['products'])) {  // - La fonction isset() vérifie l'existence d'une variable peu importe si elle est vide ou pas. - La fonction ! empty() vérifie si une variable n'est pas vide peu importe si elle existe ou pas.
             echo "<p>Aucun produit en session...</p>"; // -> Soit la clé "products" du tableau de session $_SESSION n'existe pas : !isset() -> Soit cette clé existe mais ne contient aucune donnée : empty(). Dans ces ceux cas, nous afficherons à l'utilisateur un message le prévenant qu'aucun produit n'existe en session. Il ne nous reste plus qu'à afficher le contenu de $_SESSION dans la partie else de notre condition.
         }
@@ -53,6 +53,7 @@
                         "<td>".number_format($product['price'], 2, ",", "&nbsp;"). "&nbsp;€</td>",  
                         "<td>".$product['qtt']."</td>",                                                     // La fonction number_format() permet de modifier l'affichage d'une valeur numérique en précisant plusieurs paramètres : number_format(variable à modifier, nb de décimales souhaité, caractère séparateur décimal, caractère séârateur de milliers); 
                         "<td>".number_format($product['total'], 2, ",", "&nbsp")."&nbsp;€</td>",               // en ajoutant le symbole €,  avant la fermeture le la balise <td>, le prix s'affichera avec € derrière
+                        "<td><a href='traitement.php?action=remove' class='uk-button uk-button-primary uk-button-small'>Remove</a></td>",               
                     "</tr>";
                 $totalGeneral += $product['total'];
             } 
@@ -63,9 +64,14 @@
             "</tbody>",
             "</table>";
         }
-   
-     //var_dump($_SESSION['products']);   
-   ?> 
+
+//var_dump($_SESSION['products']);   
+        ?> 
+
+<a href="traitement.php?action=clear" class="uk-button uk-button-primary uk-button-small">CLEAR</a>
+
+
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/js/uikit.min.js" integrity="sha512-qlI3geWkDYoFqY+xf/1GTxLOYw5c2Fp0w7+bPTrkwEJD7+NWDTWOKNFA48kDY/uC5AU9jFAt6VlueKFDVjYjHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.7/dist/js/uikit-icons.min.js"></script>
 </body>
