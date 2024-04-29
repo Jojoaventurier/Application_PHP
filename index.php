@@ -1,5 +1,5 @@
 <?php
-    session_start()
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -73,8 +73,15 @@
 
 
             <?php
-                             
-            var_dump($_SESSION['products']);
+
+            if (isset($_SESSION['flash_message'])) {
+
+                $message = $_SESSION['flash_message'];
+                unset($_SESSION['flash_message']);
+                echo $message;
+            }  
+
+            //var_dump($_SESSION['products']);
             ?>
 
         </section>
