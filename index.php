@@ -16,15 +16,26 @@
     </head>
     <body>
 
-            <nav class="grey">
-                <a class="uk-link-heading" href=index.php>Accueil</a>
-                <a class="uk-link-heading" href=recap.php>Récapitulatif</a>     
-            </nav>
+        <nav class="grey">
+            <a class="uk-link-heading" href=index.php>Accueil</a>
+            <span class="uk-text-primary">|</span>
+            <a class="uk-link-heading" href=recap.php>Récapitulatif</a>     
+        </nav>
 
-            <div class= "grey"> 
-                <?php echo "Nombre de produits ajoutés : ".count($_SESSION['products']); ?>
-            </div>
-
+        <div class= "grey"> 
+            <?php 
+                if (!isset($_SESSION['products'])) {
+                    echo "Aucun produits ajoutés pour le moment<br>";
+            } else {
+                echo "Nombre de produits ajoutés : ".count($_SESSION['products'])."<br>"; 
+            }
+            ?>
+            <form action="traitement.php?action=clear" method="post">
+                <input type="button" class="uk-button uk-button-primary uk-button-small" value="CLEAR">
+            </form>    
+        </div>
+        
+    
         <section id ="wrapper" > 
                
 
