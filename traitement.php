@@ -4,7 +4,7 @@
     if(isset($_GET['action'])) {
 
         switch($_GET['action']) {
-            
+
             case "add": 
                 if(isset($_POST['submit'])){   //avec cette condition, on vérifie l'existence de la clé "submit" dans le tableau $_POST, cette clé correspond à l'attribut "name" du bouton <input type="submit" name="submit"> du formulaire  //La condition sera vraie seulement si la requête POST tranmet bien une clé "submit" au serveur. 
                      
@@ -32,7 +32,6 @@
                 
 
             case "remove":
-                
                  foreach ($_SESSION['products'] as $index => $product){
                     if ($_GET['id'] == $index){
                         unset($_SESSION['products'][$index]);
@@ -43,7 +42,6 @@
 
 
             case "add1":
-                  
                     foreach ($_SESSION['products'] as $index => $product){
                         if ($_GET['id'] == $index){
                             $_SESSION['products'][$index]['qtt'] ++;

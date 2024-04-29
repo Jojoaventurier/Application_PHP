@@ -25,7 +25,7 @@
         <div class= "grey"> 
             <?php 
                 if (!isset($_SESSION['products'])) {
-                    echo "Aucun produits ajoutés pour le moment<br>";
+                    echo "Aucun produit ajouté pour le moment<br>";
             } else {
                     $result = 0;
                 foreach ($_SESSION['products'] as $index => $product) {
@@ -37,10 +37,8 @@
             ?>  
         </div>
         
-    
         <section id ="wrapper" > 
-               
-
+            
             <div id="appBox" class="uk-card uk-card-body">
             
                 <h2 id="titre" class="uk-card-title">Ajouter un <span class='uk-text-primary'>produit</span></h2>
@@ -75,9 +73,8 @@
 
 
             <?php
-
-
-            var_dump($_SESSION['products'])
+                             
+            var_dump($_SESSION['products']);
             ?>
 
         </section>
