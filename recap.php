@@ -6,10 +6,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/css/uikit-core-rtl.min.css" integrity="sha512-/KGfVFsbk9a7nzjCYF0dSMc+H58wKeODeZVyPaR20TlLVtoQVitubbROxToRODDiBW4EbBSAA//yAt1N+xgVtg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 
     <title>Récapitulatif des produits</title>
 </head>
 <body>
+
+            <nav class="menu">
+                <a href=index.php>Accueil</a>
+                <a href=recap.php>Récapitulatif</a>      
+            </nav>
    <?php 
         if(!isset($_SESSION['products']) || empty($_SESSION['products'])) {  // - La fonction isset() vérifie l'existence d'une variable peu importe si elle est vide ou pas. - La fonction ! empty() vérifie si une variable n'est pas vide peu importe si elle existe ou pas.
             echo "<p>Aucun produit en session...</p>"; // -> Soit la clé "products" du tableau de session $_SESSION n'existe pas : !isset() -> Soit cette clé existe mais ne contient aucune donnée : empty(). Dans ces ceux cas, nous afficherons à l'utilisateur un message le prévenant qu'aucun produit n'existe en session. Il ne nous reste plus qu'à afficher le contenu de $_SESSION dans la partie else de notre condition.
@@ -47,5 +54,7 @@
    
      //var_dump($_SESSION['products']);   
    ?> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/js/uikit.min.js" integrity="sha512-qlI3geWkDYoFqY+xf/1GTxLOYw5c2Fp0w7+bPTrkwEJD7+NWDTWOKNFA48kDY/uC5AU9jFAt6VlueKFDVjYjHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.7/dist/js/uikit-icons.min.js"></script>
 </body>
 </html>

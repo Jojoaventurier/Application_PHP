@@ -11,8 +11,14 @@
         <title>Ajout produit</title>
     </head>
     <body>
-        <section id ="wrapper" > 
 
+            <nav class="menu">
+                <a href=index.php>Accueil</a>
+                <a href=recap.php>Récapitulatif</a>      
+            </nav>
+
+        <section id ="wrapper" > 
+               
 
             <div id="appBox" class="uk-card uk-card-body">
                 <h2 id="titre" class="uk-card-title">Ajouter un produit</h2>
