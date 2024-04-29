@@ -1,3 +1,7 @@
+<?php
+    session_start()
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,10 +16,14 @@
     </head>
     <body>
 
-            <nav class="menu">
+            <nav class="grey">
                 <a href=index.php>Accueil</a>
                 <a href=recap.php>Récapitulatif</a>      
             </nav>
+
+            <div class= "grey"> 
+                <?php echo "Nombre de produits ajoutés : ".count($_SESSION['products']); ?>
+            </div>
 
         <section id ="wrapper" > 
                
@@ -46,6 +54,12 @@
                     </p>
                 </form>
             </div>
+
+
+
+
+
+
         </section>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/js/uikit.min.js" integrity="sha512-qlI3geWkDYoFqY+xf/1GTxLOYw5c2Fp0w7+bPTrkwEJD7+NWDTWOKNFA48kDY/uC5AU9jFAt6VlueKFDVjYjHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.7/dist/js/uikit-icons.min.js"></script>
