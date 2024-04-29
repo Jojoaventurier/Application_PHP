@@ -27,7 +27,12 @@
                 if (!isset($_SESSION['products'])) {
                     echo "Aucun produits ajoutés pour le moment<br>";
             } else {
-                echo "Nombre de produits ajoutés : <span class='uk-text-primary'>".count($_SESSION['products'])."</span><br>"; 
+                    $result = 0;
+                foreach ($_SESSION['products'] as $index => $product) {
+                    
+                    $result += $_SESSION['products'][$index]['qtt'];
+                }
+                echo "Nombre de produits ajoutés : <span class='uk-text-primary'>".$result."</span><br>"; 
             }
             ?>  
         </div>
