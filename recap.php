@@ -32,8 +32,7 @@
         <?php 
         if(!isset($_SESSION['products']) || empty($_SESSION['products'])) {  // - La fonction isset() vérifie l'existence d'une variable peu importe si elle est vide ou pas. - La fonction ! empty() vérifie si une variable n'est pas vide peu importe si elle existe ou pas.
             echo "<p>Aucun produit en session...</p>"; // -> Soit la clé "products" du tableau de session $_SESSION n'existe pas : !isset() -> Soit cette clé existe mais ne contient aucune donnée : empty(). Dans ces ceux cas, nous afficherons à l'utilisateur un message le prévenant qu'aucun produit n'existe en session. Il ne nous reste plus qu'à afficher le contenu de $_SESSION dans la partie else de notre condition.
-        }
-        else {
+        } else {
             echo "<table>",
                     "<head>",
                         "<tr>",
@@ -68,7 +67,7 @@
             "</table>";
         }
 
-//var_dump($_SESSION['products']);   
+
         ?> 
 
 <a href="traitement.php?action=clear" class="uk-button uk-button-primary uk-button-small">CLEAR</a>

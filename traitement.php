@@ -34,7 +34,7 @@
                         unset($_SESSION['products'][$index]);
                     }
                   
-                 } //ajouter if (empty($_SESSION)['products]) { unset($_SESSION["products"]); }
+                 } echo "Tous les produits ont été supprimés du panier"; //ajouter if (empty($_SESSION)['products]) { unset($_SESSION["products"]); }
             break;
 
             case "add1":
@@ -47,13 +47,14 @@
 
             case "minus1":
                 foreach ($_SESSION['products'] as $index => $product){
-                    if ($_GET['id'] == $index){
+                    if ($_GET['id'] == $index && $_SESSION['products'][$index]['qtt'] > 1 ){
                         $_SESSION['products'][$index]['qtt'] --;
+                    } else if  ($_GET['id'] == $index && $_SESSION['products'][$index]['qtt'] == 1) {
+                        unset($_SESSION['products'][$index]);
                     }
-                 } 
-            break;
-        }   
-        
+                }
+            break;     
+        }        
     }  
 
 header("Location:recap.php"); // dans l'autre cas, la ligne où est écrit header("Location:index.php"); va effectuer une redirection. Il n'y a pas de "else" à la condition car dans tous les cas (formulaire soumis ou non), nous ouhaitons revenir au formulaire après traitement // header("Location:...") est une fonction qui envoie un nouvel entête HTTP (les entêtes d'une réponse) au client. Avec le type d'appel "Location:", cette réponse est envoyée au client avec le code 302 qui indique une redirection. //-> le client recevra alors la ressource précisée dans cette fonction. Attention, l'utilisation de la fonction header() nécessite deux précautions. //-> ATTENTION : la page qui l'emploie NE DOIS PAS AVOIR EMIS UN DEBUT DE REPONSE AVANT header() (afficher du HTML par ex, appeler les fonctions echo() ou print(), ou au untre header()...) sour peine de perturber la réponse à émettre au client (mauvais entêtes HTTP...)//-> ATTENTION : l'appel de la fonction header() n'arrête pas l'exécution du script courant. Si le fichier effectue à la suite de la fonction d'autres traitements, il seront exécutés. Il faut alors veiller à ce que header() soit la dernière instruction du fichier ou appeler la fonction exit() (ou die()) tout de suite après. De même, une fonction header() appelée succesivement à une autre écrasera les entêtes de la première...//-> si on essaye d'accéder à traitement.php sans passer par la validation du  formulaire (en saisissant directement son URL dans la barre d'adresse du navigateur)... Nous sommes envoyés sur index.php quoi qu'il arrive. 
