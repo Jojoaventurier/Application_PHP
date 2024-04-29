@@ -15,29 +15,27 @@
         <title>Ajout produit</title>
     </head>
     <body>
+        <section class ="wrapper" >
+            <nav class="grey">
+                <a class="uk-link-heading" href=index.php>Accueil</a>
+                <span class="uk-text-primary">|</span>
+                <a class="uk-link-heading" href=recap.php>Récapitulatif</a>     
+            </nav>
 
-        <nav class="grey">
-            <a class="uk-link-heading" href=index.php>Accueil</a>
-            <span class="uk-text-primary">|</span>
-            <a class="uk-link-heading" href=recap.php>Récapitulatif</a>     
-        </nav>
-
-        <div class= "grey"> 
-            <?php 
-                if (!isset($_SESSION['products'])) {
-                    echo "Aucun produit ajouté pour le moment<br>";
-            } else {
-                    $result = 0;
-                foreach ($_SESSION['products'] as $index => $product) {
-                    
-                    $result += $_SESSION['products'][$index]['qtt'];
+            <div class= "grey"> 
+                <?php 
+                    if (!isset($_SESSION['products'])) {
+                        echo "Aucun produit ajouté pour le moment<br>";
+                } else {
+                        $result = 0;
+                    foreach ($_SESSION['products'] as $index => $product) {
+                        
+                        $result += $_SESSION['products'][$index]['qtt'];
+                    }
+                    echo "Nombre de produits ajoutés : <span class='uk-text-primary'>".$result."</span><br>"; 
                 }
-                echo "Nombre de produits ajoutés : <span class='uk-text-primary'>".$result."</span><br>"; 
-            }
-            ?>  
-        </div>
-        
-        <section id ="wrapper" > 
+                ?>  
+            </div>
             
             <div id="appBox" class="uk-card uk-card-body">
             
