@@ -31,7 +31,7 @@
             }
             ?>
             <form action="traitement.php?action=clear" method="post">
-                <input type="button" class="uk-button uk-button-primary uk-button-small" value="CLEAR">
+                <input type="button" class="uk-button uk-button-primary uk-button-small" name="CLEAR" value="CLEAR">
             </form>    
         </div>
         
