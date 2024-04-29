@@ -17,8 +17,8 @@
     <body>
 
             <nav class="grey">
-                <a href=index.php>Accueil</a>
-                <a href=recap.php>Récapitulatif</a>      
+                <a class="uk-link-heading" href=index.php>Accueil</a>
+                <a class="uk-link-heading" href=recap.php>Récapitulatif</a>     
             </nav>
 
             <div class= "grey"> 

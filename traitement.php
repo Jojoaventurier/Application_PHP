@@ -16,8 +16,24 @@
                 'total' => $price*$qtt
             ];
 
-            $_SESSION["products"][] = $product; // cette ligne est efficace car : -> on sollicita le tableau de session $_SESSION fourni par PHP. -> on indique la clé "products" de ce tableau. Si cette clé n'existait pas auparavant (par exemple si l'utilisateur ajoute son tout premier produit), PHP la crééera au sein de $_SESSION. -> les deux crochets [] sont un raccourci pour indiquer à cet emplacement que nous ajoutons une nouvelle entrée au futur tableau "products" associé à cette clé. $_SESSION["products"] doit être lui aussi un tableau afin d'y stocker de nouveaux produits par la suite. (autre syntaxe pour $_SESSION['products'][] = $product est : array_push($_SESSION['products'], $product) mais PHP nous conseille dans sa documentation d'utiliser les [] pour éviter le passage d'une fonction (plus lourd en termes de performances)
+            $_SESSION["products"][] = $product; // cette ligne est efficace car : -> on sollicite le tableau de session $_SESSION fourni par PHP. -> on indique la clé "products" de ce tableau. Si cette clé n'existait pas auparavant (par exemple si l'utilisateur ajoute son tout premier produit), PHP la crééera au sein de $_SESSION. -> les deux crochets [] sont un raccourci pour indiquer à cet emplacement que nous ajoutons une nouvelle entrée au futur tableau "products" associé à cette clé. $_SESSION["products"] doit être lui aussi un tableau afin d'y stocker de nouveaux produits par la suite. (autre syntaxe pour $_SESSION['products'][] = $product est : array_push($_SESSION['products'], $product) mais PHP nous conseille dans sa documentation d'utiliser les [] pour éviter le passage d'une fonction (plus lourd en termes de performances)
         }
     }   
+
+    $favcolor = "";
+
+    switch ($favcolor) {
+        case "red":
+          echo "Your favorite color is red!";
+          break;
+        case "blue":
+          "Your favorite color is blue!";
+          break;
+        case "green":
+          echo "Your favorite color is green!";
+          break;
+        default:
+          echo "Your favorite color is neither red, blue, nor green!";
+      }
        
-    header("Location:index.php"); // dans l'autre cas, la ligne où est écrit header("Location:index.php"); va effectuer une redirection. Il n'y a pas de "else" à la condition car dans tous les cas (formulaire soumis ou non), nous ouhaitons revenir au formulaire après traitement // header("Location:...") est une fonction qui envoie un nouvel entête HTTP (les entêtes d'une réponse) au client. Avec le type d'appel "Location:", cette réponse est envoyée au client avec le code 302 qui indique une redirection. //-> le client recevra alors la ressource précisée dans cette fonction. Attention, l'utilisation de la fonction header() nécessite deux précautions. //-> ATTENTION : la page qui l'emploie NE DOIS PAS AVOIR EMIS UN DEBUT DE REPONSE AVANT header() (afficher du HTML par ex, appeler les fonctions echo() ou print(), ou au untre header()...) sour peine de perturber la réponse à émettre au client (mauvais entêtes HTTP...)//-> ATTENTION : l'appel de la fonction header() n'arrête pas l'exécution du script courant. Si le fichier effectue à la suite de la fonction d'autres traitements, il seront exécutés. Il faut alors veiller à ce que header() soit la dernière instruction du fichier ou appeler la fonction exit() (ou die()) tout de suite après. De même, une fonction header() appelée succesivement à une autre écrasera les entêtes de la première...//-> si on essaye d'accéder à traitement.php sans passer par la validation du  formulaire (en saisissant directement son URL dans la barre d'adresse du navigateur)... Nous sommes envoyés sur index.php quoi qu'il arrive. 
+    //header("Location:index.php"); // dans l'autre cas, la ligne où est écrit header("Location:index.php"); va effectuer une redirection. Il n'y a pas de "else" à la condition car dans tous les cas (formulaire soumis ou non), nous ouhaitons revenir au formulaire après traitement // header("Location:...") est une fonction qui envoie un nouvel entête HTTP (les entêtes d'une réponse) au client. Avec le type d'appel "Location:", cette réponse est envoyée au client avec le code 302 qui indique une redirection. //-> le client recevra alors la ressource précisée dans cette fonction. Attention, l'utilisation de la fonction header() nécessite deux précautions. //-> ATTENTION : la page qui l'emploie NE DOIS PAS AVOIR EMIS UN DEBUT DE REPONSE AVANT header() (afficher du HTML par ex, appeler les fonctions echo() ou print(), ou au untre header()...) sour peine de perturber la réponse à émettre au client (mauvais entêtes HTTP...)//-> ATTENTION : l'appel de la fonction header() n'arrête pas l'exécution du script courant. Si le fichier effectue à la suite de la fonction d'autres traitements, il seront exécutés. Il faut alors veiller à ce que header() soit la dernière instruction du fichier ou appeler la fonction exit() (ou die()) tout de suite après. De même, une fonction header() appelée succesivement à une autre écrasera les entêtes de la première...//-> si on essaye d'accéder à traitement.php sans passer par la validation du  formulaire (en saisissant directement son URL dans la barre d'adresse du navigateur)... Nous sommes envoyés sur index.php quoi qu'il arrive. 

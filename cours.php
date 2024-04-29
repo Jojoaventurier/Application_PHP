@@ -14,7 +14,7 @@ Le terme "superglobales" signifie que ces variables sont disponibles dans N'IMPO
        -->monsite.com -> le nom de domaine du serveur sur le réseau internet
        -->liste.php -> la ressource (fichier) demandé
        --> ?page = 2 est un paramètre de requête (Query String Parameter) "page" avc pour valeur = 2. Il s'agit de cet élément qu'on pourra récupérer avec la superglobale $_GET.
-        Ce paramètre est référencé dans $_GET, fournie par le langage PHP et est spécialement conàure pour récupérer les paramètres de requête.
+        Ce paramètre est référencé dans $_GET, fournie par le langage PHP et est spécialement conçue pour récupérer les paramètres de requête.
 
         $_GET -> liée à la méthode HTTP GET (contient tous les paramètres ayant été transmis au serveur par l'intermédiaire de l'URL de la requête -> Query String Parameters)
 
