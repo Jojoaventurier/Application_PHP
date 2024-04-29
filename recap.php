@@ -53,8 +53,9 @@
                         "<td>".number_format($product['price'], 2, ",", "&nbsp;"). "&nbsp;€</td>",  
                         "<td>".$product['qtt']."</td>",                                                     // La fonction number_format() permet de modifier l'affichage d'une valeur numérique en précisant plusieurs paramètres : number_format(variable à modifier, nb de décimales souhaité, caractère séparateur décimal, caractère séârateur de milliers); 
                         "<td>".number_format($product['total'], 2, ",", "&nbsp")."&nbsp;€</td>",               // en ajoutant le symbole €,  avant la fermeture le la balise <td>, le prix s'affichera avec € derrière
+                        "<td><a href='traitement.php?action=add1&id=$index' class='uk-button uk-button-primary uk-button-small'>+1</a></td>",
+                        "<td><a href='traitement.php?action=minus1&id=$index' class='uk-button uk-button-primary uk-button-small'>-1</a></td>",               
                         "<td><a href='traitement.php?action=remove&id=$index' class='uk-button uk-button-primary uk-button-small'>Remove</a></td>",               
-                        "<td><a href='traitement.php?action=add1&id=$index' class='uk-button uk-button-primary uk-button-small'>+1</a></td>",               
                     "</tr>";
                 $totalGeneral += $product['total'];
                 //var_dump($product);
