@@ -27,7 +27,7 @@
                 if (!isset($_SESSION['products'])) {
                     echo "Aucun produits ajoutés pour le moment<br>";
             } else {
-                echo "Nombre de produits ajoutés : ".count($_SESSION['products'])."<br>"; 
+                echo "Nombre de produits ajoutés : <span class='uk-text-primary'>".count($_SESSION['products'])."</span><br>"; 
             }
             ?>  
         </div>

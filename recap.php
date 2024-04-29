@@ -15,6 +15,7 @@
 
     <nav class="grey">
         <a class="uk-link-heading" href=index.php>Accueil</a>
+        <span class="uk-text-primary">|</span>
         <a class="uk-link-heading" href=recap.php>Récapitulatif</a>      
     </nav>
 
@@ -23,7 +24,7 @@
                 if (!isset($_SESSION['products'])) {
                     echo "";
             } else {
-                echo "Nombre de produits ajoutés : ".count($_SESSION['products'])."<br>"; 
+                echo "Nombre de produits ajoutés : <span class='uk-text-primary'>".count($_SESSION['products'])."</span><br>"; 
             }
             ?>
         
