@@ -24,7 +24,7 @@
                         ];
             
                         $_SESSION["products"][] = $product;  // cette ligne est efficace car : -> on sollicite le tableau de session $_SESSION fourni par PHP. -> on indique la clé "products" de ce tableau. Si cette clé n'existait pas auparavant (par exemple si l'utilisateur ajoute son tout premier produit), PHP la crééera au sein de $_SESSION. -> les deux crochets [] sont un raccourci pour indiquer à cet emplacement que nous ajoutons une nouvelle entrée au futur tableau "products" associé à cette clé. $_SESSION["products"] doit être lui aussi un tableau afin d'y stocker de nouveaux produits par la suite. (autre syntaxe pour $_SESSION['products'][] = $product est : array_push($_SESSION['products'], $product) mais PHP nous conseille dans sa documentation d'utiliser les [] pour éviter le passage d'une fonction (plus lourd en termes de performances)
-                        $_SESSION['flash_message'] = "Vous avez ajouté un <span class='uk-text-primary'>produit</span>!";
+                        $_SESSION['flash_message'] = "Vous avez ajouté l'article <span class='uk-text-primary'>".$product['name']."</span>!";
                         
                          }   
                 }break;
@@ -38,12 +38,12 @@
 
             case "remove":
                  foreach ($_SESSION['products'] as $index => $product){
-                    if ($_GET['id'] == $index){
+                    if ($_GET['id'] == $index) {
+                        $name = $_SESSION['products'][$index]['name'];
                         unset($_SESSION['products'][$index]);
-                    } 
-                  
-                 } 
-                  //ajouter if (empty($_SESSION)['products]) { unset($_SESSION["products"]); }
+                        $_SESSION['flash_message'] = "L'article <span class='uk-text-primary'>".$name."</span> a été enlevé !";
+                        } 
+                    }//ajouter if (empty($_SESSION)['products]) { unset($_SESSION["products"]); } ?
             break;
 
 
@@ -61,7 +61,9 @@
                     if ($_GET['id'] == $index && $_SESSION['products'][$index]['qtt'] > 1 ){
                         $_SESSION['products'][$index]['qtt'] --;
                     } else if  ($_GET['id'] == $index && $_SESSION['products'][$index]['qtt'] == 1) {
+                        $name = $_SESSION['products'][$index]['name'];
                         unset($_SESSION['products'][$index]);
+                        $_SESSION['flash_message'] = "L'article <span class='uk-text-primary'>".$name."</span> a été enlevé !";
                     }
                 }
             break;     

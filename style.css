@@ -2,13 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: antiquewhite;
 }
+
 #wrapper { 
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: rgba(227, 236, 236, 0.507);  
+    background-color: antiquewhite;  
 }
 
 #appBox {
@@ -20,7 +22,7 @@
 }
 
 .grey {
-    background-color: rgba(227, 236, 236, 0.507);
+    background-color: antiquewhite;
 }
 
 
