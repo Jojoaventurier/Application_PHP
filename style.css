@@ -7,10 +7,11 @@
 
 #wrapper { 
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: rgb(242, 251, 255);  
+    background-color: rgb(242, 252, 255);  
 }
 
 #appBox {
@@ -22,7 +23,7 @@
 }
 
 .grey {
-    background-color: rgb(242, 251, 255); 
+    background-color: rgb(242, 252, 255); 
 }
 
 
