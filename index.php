@@ -42,7 +42,9 @@
                
 
             <div id="appBox" class="uk-card uk-card-body">
+            
                 <h2 id="titre" class="uk-card-title">Ajouter un <span class='uk-text-primary'>produit</span></h2>
+
                 <form action="traitement.php?action=add" method="post">  <!--attribut action : indique la cible du formulaire, le fichier à atteindre lorsque l'utilisateur soumettra le formulaire -->                                               
                     <p>                                       <!--attribut method : précise par quelle méthode HTTP les données du formulaire sont transmises au serveur -->
                         <label>                               <!--La méthode employée ici est POST, pour ne pas "polluer" l'URL avec les données du formulaire (il est néanmoins possible de soumettre un formulaire avec la méthode GET(utilisée par défaut si aucune méthode n'est précisée), les données renseignées dans les champs du formulaire seraient par conséquent inscrites dans l'URL et limitées en nombre de caractères selon le navigateur ou le serveur) -->
@@ -63,21 +65,23 @@
                         </label>
                     </p>
                     <p>
-                        <input id="bouton_ajout" class="uk-button uk-button-primary uk-button-small" type="submit" name="submit" value="Ajouter le produit"> <!--Le champ <input type="submit">, représentant le bouton de soumission de formulaire, contient lui aussi un attribut "name". Ce choix permettra de vérifier côté serveur que le formulaire a bien été validé par l'utilisateur.--> 
+                        <input class="uk-button uk-button-primary uk-button-small" type="submit" name="submit" value="Ajouter le produit"> <!--Le champ <input type="submit">, représentant le bouton de soumission de formulaire, contient lui aussi un attribut "name". Ce choix permettra de vérifier côté serveur que le formulaire a bien été validé par l'utilisateur.--> 
                     </p>
                 </form>
+
             </div>
 
             <a href="traitement.php?action=clear" class="uk-button uk-button-primary uk-button-small">CLEAR</a>
 
 
-<?php
+            <?php
 
 
-var_dump($_SESSION['products'])
-?>
+            var_dump($_SESSION['products'])
+            ?>
 
         </section>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.20.4/js/uikit.min.js" integrity="sha512-qlI3geWkDYoFqY+xf/1GTxLOYw5c2Fp0w7+bPTrkwEJD7+NWDTWOKNFA48kDY/uC5AU9jFAt6VlueKFDVjYjHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.7/dist/js/uikit-icons.min.js"></script>
     </body>
