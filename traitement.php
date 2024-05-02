@@ -47,7 +47,7 @@
             break;
 
 
-            case "add1":
+            case "increaseQuantity":
                     foreach ($_SESSION['products'] as $index => $product){
                         if ($_GET['id'] == $index){
                             $_SESSION['products'][$index]['qtt'] ++;
@@ -56,7 +56,7 @@
             break;
 
 
-            case "minus1":
+            case "decreaseQuantity":
                 foreach ($_SESSION['products'] as $index => $product){
                     if ($_GET['id'] == $index && $_SESSION['products'][$index]['qtt'] > 1 ){
                         $_SESSION['products'][$index]['qtt'] --;
